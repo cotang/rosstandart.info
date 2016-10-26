@@ -1,0 +1,275 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.SECTION.contacts-section
+  .container-fluid
+    .row
+      .col-xs-12.col-lg-4
+        +e.city-wrapper
+          +e.city(data-city="spb")
+            +e.H3.title Центры сертификации в Санкт-Петербурге
+            +e.office-gallery
+              - for (var i = 0; i < 7; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Тест Петербург
+                  +e.address 
+                    div(itemprop="addressLocality") Станции метро: "Балтийская" 
+                    div(itemprop="address") Митрофаньевское шоссе, д. 2, офис 217/2
+                  +e.email E-mail: 
+                    span(itemprop="email") info@testspb.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (812) 441-37-92
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (812) 921-60-01
+                  +e.A.link(href="page-contacts.html#spb") Посмотреть на карте
+              - } 
+          +e.city(data-city="msk")
+            +e.H3.title Центры сертификации в Москве
+            +e.office-gallery
+              - for (var i = 0; i < 3; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Мостест Москва
+                  +e.address
+                    div(itemprop="addressLocality") Станции метро: "Курская" / "Чкаловская" 
+                    div(itemprop="address") Костомаровский пер., д. 3, стр. 12, оф. 604
+                  +e.email E-mail: 
+                    span(itemprop="email") 77@mostest.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (495) 228-07-40
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (495) 162-09-44
+                  +e.A.link(href="page-contacts.html#msk") Посмотреть на карте
+              - }
+          +e.city(data-city="ekb")
+            +e.H3.title Центры сертификации в Екатеринбурге
+            +e.office-gallery
+              - for (var i = 0; i < 3; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Ростест Урал
+                  +e.address
+                    div(itemprop="addressLocality") Станции метро: "Геологическая"
+                    div(itemprop="address") ул. Розы Люксембург, д. 49, БЦ "Онегин", офис 617
+                  +e.email E-mail: 
+                    span(itemprop="email") info@rostestural.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (343) 287-04-46
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (343) 328-00-46
+                  +e.A.link(href="page-contacts.html#ekb") Посмотреть на карте
+              - }
+          +e.city(data-city="perm")
+            +e.H3.title Центры сертификации в Перми
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Пермь
+                  +e.address
+                    div(itemprop="address") ул. 25 Октября, д. 101
+                  +e.email E-mail: 
+                    span(itemprop="email") 81@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (342) 259-68-29
+                  +e.A.link(href="page-contacts.html#perm") Посмотреть на карте
+              - }
+          +e.city(data-city="tyumen")
+            +e.H3.title Центры сертификации в Тюмени
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Тюмень
+                  +e.address
+                    div(itemprop="address") ул. Осипенко, д.79, корп.1
+                  +e.email E-mail: 
+                    span(itemprop="email") 72@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (345) 249-42-27
+                  +e.A.link(href="page-contacts.html#tyumen") Посмотреть на карте
+              - }
+          +e.city(data-city="surgut")
+            +e.H3.title Центры сертификации в Сургуте
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Ростест Сургут
+                  +e.address
+                    div(itemprop="address") ул. 30 лет Победы, д. 44а
+                  +e.email E-mail: 
+                    span(itemprop="email") 86@hantest.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (346) 244-40-30
+                  +e.A.link(href="page-contacts.html#surgut") Посмотреть на карте
+              - }
+          +e.city(data-city="ufa")
+            +e.H3.title Центры сертификации в Уфе
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Уфа
+                  +e.address
+                    div(itemprop="address") ул. Карла Маркса, д. 20
+                  +e.email E-mail: 
+                    span(itemprop="email")  02@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (347) 264-19-52
+                  +e.A.link(href="page-contacts.html#ufa") Посмотреть на карте
+              - }
+          +e.city(data-city="spb2")
+            +e.H3.title Центры сертификации в Санкт-Петербурге
+            +e.office-gallery
+              - for (var i = 0; i < 7; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Тест Петербург
+                  +e.address 
+                    div(itemprop="addressLocality") Станции метро: "Балтийская" 
+                    div(itemprop="address") Митрофаньевское шоссе, д. 2, офис 217/2
+                  +e.email E-mail: 
+                    span(itemprop="email") info@testspb.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (812) 441-37-92
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (812) 921-60-01
+                  +e.A.link(href="page-contacts.html#spb") Посмотреть на карте
+              - } 
+          +e.city(data-city="msk2")
+            +e.H3.title Центры сертификации в Москве
+            +e.office-gallery
+              - for (var i = 0; i < 3; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Мостест Москва
+                  +e.address
+                    div(itemprop="addressLocality") Станции метро: "Курская" / "Чкаловская" 
+                    div(itemprop="address") Костомаровский пер., д. 3, стр. 12, оф. 604
+                  +e.email E-mail: 
+                    span(itemprop="email") 77@mostest.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (495) 228-07-40
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (495) 162-09-44
+                  +e.A.link(href="page-contacts.html#msk") Посмотреть на карте
+              - }
+          +e.city(data-city="ekb2")
+            +e.H3.title Центры сертификации в Екатеринбурге
+            +e.office-gallery
+              - for (var i = 0; i < 3; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Ростест Урал
+                  +e.address
+                    div(itemprop="addressLocality") Станции метро: "Геологическая"
+                    div(itemprop="address") ул. Розы Люксембург, д. 49, БЦ "Онегин", офис 617
+                  +e.email E-mail: 
+                    span(itemprop="email") info@rostestural.ru
+                  +e.tel--fax Тел/факс:
+                    span(itemprop="faxNumber") +7 (343) 287-04-46
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (343) 328-00-46
+                  +e.A.link(href="page-contacts.html#ekb") Посмотреть на карте
+              - }
+          +e.city(data-city="perm2")
+            +e.H3.title Центры сертификации в Перми
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Пермь
+                  +e.address
+                    div(itemprop="address") ул. 25 Октября, д. 101
+                  +e.email E-mail: 
+                    span(itemprop="email") 81@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (342) 259-68-29
+                  +e.A.link(href="page-contacts.html#perm") Посмотреть на карте
+              - }
+          +e.city(data-city="tyumen2")
+            +e.H3.title Центры сертификации в Тюмени
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Тюмень
+                  +e.address
+                    div(itemprop="address") ул. Осипенко, д.79, корп.1
+                  +e.email E-mail: 
+                    span(itemprop="email") 72@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (345) 249-42-27
+                  +e.A.link(href="page-contacts.html#tyumen") Посмотреть на карте
+              - }
+          +e.city(data-city="surgut2")
+            +e.H3.title Центры сертификации в Сургуте
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Ростест Сургут
+                  +e.address
+                    div(itemprop="address") ул. 30 лет Победы, д. 44а
+                  +e.email E-mail: 
+                    span(itemprop="email") 86@hantest.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (346) 244-40-30
+                  +e.A.link(href="page-contacts.html#surgut") Посмотреть на карте
+              - }
+          +e.city(data-city="ufa2")
+            +e.H3.title Центры сертификации в Уфе
+            +e.office-gallery
+              - for (var i = 0; i < 2; i++){
+                +b.office-slide(itemscope, itemtype="http://schema.org/Place")
+                  +e.H3.title(itemprop="name") Гортест Уфа
+                  +e.address
+                    div(itemprop="address") ул. Карла Маркса, д. 20
+                  +e.email E-mail: 
+                    span(itemprop="email")  02@gortestural.ru
+                  +e.tel Телефон:
+                    span(itemprop="telephone") +7 (347) 264-19-52
+                  +e.A.link(href="page-contacts.html#ufa") Посмотреть на карте
+              - }
+      .col-xs-12.col-lg-5.col-xl-6
+        +e.map
+          +e.img
+          +e.pin
+            +b.pin--spb(data-city="spb")
+            +b.pin--msk(data-city="msk")
+            +b.pin--ekb(data-city="ekb")
+            +b.pin--perm(data-city="perm")
+            +b.pin--tyumen(data-city="tyumen")
+            +b.pin--surgut(data-city="surgut")
+            +b.pin--ufa(data-city="ufa")
+            +b.pin--spb(data-city="spb2")
+            +b.pin--msk(data-city="msk2")
+            +b.pin--ekb(data-city="ekb2")
+            +b.pin--perm(data-city="perm2")
+            +b.pin--tyumen(data-city="tyumen2")
+            +b.pin--surgut(data-city="surgut2")
+            +b.pin--ufa(data-city="ufa2")
+      .col-xs-12.col-lg-3.col-xl-2
+        +b.city
+          +e.gallery
+            +e.item
+              +e.link(href="#spb", data-city="spb") Санкт-Петербург
+            +e.item
+              +e.link(href="#msk", data-city="msk") Москва
+            +e.item
+              +e.link(href="#ekb", data-city="ekb") Екатеринбург
+            +e.item
+              +e.link(href="#perm", data-city="perm") Пермь
+            +e.item
+              +e.link(href="#tyumen", data-city="tyumen") Тюмень
+            +e.item
+              +e.link(href="#surgut", data-city="surgut") Сургут
+            +e.item
+              +e.link(href="#ufa", data-city="ufa") Уфа
+            +e.item
+              +e.link(href="#spb2", data-city="spb2") Санкт-Петербург
+            +e.item
+              +e.link(href="#msk2", data-city="msk2") Москва
+            +e.item
+              +e.link(href="#ekb2", data-city="ekb2") Екатеринбург
+            +e.item
+              +e.link(href="#perm2", data-city="perm2") Пермь
+            +e.item
+              +e.link(href="#tyumen2", data-city="tyumen2") Тюмень
+            +e.item
+              +e.link(href="#surgut2", data-city="surgut2") Сургут
+            +e.item
+              +e.link(href="#ufa2", data-city="ufa2") Уфа
+
+
+
+

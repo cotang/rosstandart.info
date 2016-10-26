@@ -1,0 +1,61 @@
+include ../abstracts/bemto/bemto.pug
+
+
+// Footer
++b.FOOTER.footer
+  // Contacts section
+  include _contacts-section.pug
+
+  +e.footer__inner
+    .container
+      .row
+
+        .col-xs-12.col-lg-4.push-lg-8
+          // Tags
+          +b.tags 
+            +e.H3.title TAGS
+            +e.wrapper
+              +b.A.btn--tag(href="page.html") Лицензирование         
+              +b.A.btn--tag(href="page.html") Маркировка СЕ
+              +b.A.btn--tag(href="page.html") СБКТС
+              +b.A.btn--tag(href="page.html") Сертификация строительных материалов
+              +b.A.btn--tag(href="page.html") Сертификация оборудования
+              +b.A.btn--tag(href="page.html") Новости сертификации
+              +b.A.btn--tag(href="page.html") Карта сайта
+
+        .col-xs-12.col-lg-4
+          // Form footer
+          +e.footer__form
+            include _form--application.pug 
+
+        .col-xs-12.col-lg-4.pull-lg-8
+          +e.nav
+            // Nav menu footer
+            +b.NAV.nav-footer
+              +e.UL.list
+                +e.item 
+                  +e.A.link--active(href="index.html") Главная
+                +e.item
+                  +e.A.link(href="page-certtype.html") Сертификация продукции и услуг 
+                +e.item 
+                  +e.A.link(href="page.html") Законодательство
+                +e.item
+                  +e.A.link(href="page-call.html") Заказать звонок
+                +e.item 
+                  +e.A.link(href="page-question.html") Задать вопрос
+                +e.item
+                  +e.A.link(href="page-contacts.html") Центры сертификации
+
+  // Copyright
+  +b.SECTION.copyright
+    .container
+      +e.text Все права защищены © 2016. При копировании информации - активная ссылка на Rosstandart.info обязательна
+
++b.A.up(href="#")
++b.overlay
+  //- +e.form
+  //-   include _form--modal.pug
+
+
+
+

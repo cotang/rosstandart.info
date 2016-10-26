@@ -1,0 +1,107 @@
+.sidebar{
+  margin: 0 -15px; /* убираем paddding у .col из сетки */
+  &--left{
+    border-right: 1px solid $sidebar--border;
+    .menu__link--dropdown:after{
+      right: 6px;
+      border-left: 6px solid $dark-green;
+    }
+  }
+  &--right{
+    border-left: 1px solid $sidebar--border;
+    .menu__link--dropdown:after{
+      left: 6px;
+      border-right: 6px solid $dark-green;
+    }
+  }
+}
+
+.menu{
+  text-align: center;
+  &__title{
+    margin: 0;
+    padding: 20px 5px;
+    font-family: $font-family--serif;
+    font-weight: bold;
+    font-size: $font-size-sidebar-title;
+    background-image: url(../img/sidebar-header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    color: $text-green;
+  }
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    border-bottom: 2px solid $sidebar--border;
+  }
+  &__item{
+    background-image: url(../img/sidebar.png);
+    padding: 5px;
+    min-height: 60px;
+    border-top: 2px solid $sidebar--border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover, &:focus {
+      background-image: url(../img/sidebar-hover.png);
+      background-size: 100% 100%;
+    }
+  }
+  &__link{
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+    &--dropdown{
+      &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+    }
+  }
+}
+
+.submenu{
+  position: absolute;
+  z-index: 1;
+  top: -2px;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 2px solid $sidebar--border;
+  border-left: 1px solid $sidebar--border;
+  border-right: 1px solid $sidebar--border;
+  background-color: $white;
+  display: none;
+  &--left{
+    right: 0;
+    transform: translateX(100%);    
+  }
+  &--right{
+    left: 0;
+    transform: translateX(-100%);    
+  }
+
+  &__item{
+    padding: 5px;
+    min-height: 60px;
+    border-top: 2px solid $sidebar--border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}

@@ -1,0 +1,83 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.ASIDE.sidebar--left
+  // Menu execution
+  +b.SECTION.menu--execution(itemscope, itemtype="http://schema.org/Service")
+    +e.H3.title Мы оформляем
+    +e.UL.list
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Сертификат соответствия ТР
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Обязательная сертификация ГОСТ Р
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Добровольная сертификация ГОСТ Р
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Отказное письмо
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Сертификация пожарной безопасности
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Сертификат ISO:9001
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Декларация соответствия Техническому регламенту
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") СБКТС
+
+  // Menu other services
+  +b.SECTION.menu--other-services(itemscope, itemtype="http://schema.org/Service")
+    +e.H3.title Другие услуги
+    +e.UL.list
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Разработка технических условий
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Разработка паспорта на продукцию
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Разработка руководства по эксплуатации
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Свидетельство о государственной регистрации
+      +e.item 
+        +e.A.link(href="page.html", itemprop="offers") Испытание продукции
+
+  // Menu information
+  +b.SECTION.menu--information
+    +e.H3.title Информационный раздел
+    +e.UL.list
+      +e.item 
+        +e.A.link(href="page.html") Схемы сертификации
+      +e.item 
+        +e.A.link(href="page.html") ГОСТ РФ
+      +e.item 
+        +e.A.link(href="page.html") Технические регламенты ТС
+      +e.item 
+        +e.A.link--dropdown(href="javascript:void(0);") Базы кодов
+        +b.UL.submenu--left
+          +e.item 
+            +e.A.link(href="page.html") Коды ОКП
+          +e.item 
+            +e.A.link(href="page.html") Коды ОКВЕД 2
+          +e.item 
+            +e.A.link(href="page.html") Коды ОКПд
+          +e.item 
+            +e.A.link(href="page.html") Коды МКТУ
+          +e.item 
+            +e.A.link(href="page.html") Коды ТН ВЭД
+      +e.item 
+        +e.A.link--dropdown(href="javascript:void(0);") Проверка документов
+        +b.UL.submenu--left
+          +e.item 
+            +e.A.link(href="page.html") Реестр Свидетельств о госрегистрации
+          +e.item 
+            +e.A.link(href="page.html") Государственный реестр медицинских изделий и организаций, осуществляющих  производство и изготовление медицинских изделий
+          +e.item 
+            +e.A.link(href="page.html") Реестр документов на сайте Росаккредитации
+          +e.item 
+            +e.A.link(href="page.html") Реестр зарегистрированных нотификаций
+          +e.item 
+            +e.A.link(href="page.html") Реестр добровольной системы сертификации «Система качества ЕАС»
+          +e.item 
+            +e.A.link(href="page.html") Реестр штрих-кодов
+
+  // Advertisment
+  +b.SECTION.advertisment
+    +e.banner
+      img(src= "img/slider.gif", alt="banner", title="banner")

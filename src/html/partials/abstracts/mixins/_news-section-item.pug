@@ -1,0 +1,5 @@
+mixin newsSectionItem(text, date)
+  +b.ARTICLE.news-section-item(itemscope, itemtype="http://schema.org/Article")
+    +e.date(itemprop="datePublished") #{date}
+    +e.content(itemprop="articleSection") #{text}     
+    +e.A.link-more(href="single-news.html") Читать далее...

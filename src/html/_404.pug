@@ -1,0 +1,37 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page
+    .container-fluid
+      .row
+        .col-xs-12.col-lg-2    
+          // Left sidebar
+          include partials/components/_left-sidebar.pug 
+          
+        .col-xs-12.col-lg-8
+          // Content
+          +b.SECTION.content
+            +e.H1.title Ничего не найдено
+            +e.text           
+              p К сожалению по вашему запросу ничего не найдено.
+              p Воспользуйтесь полем поиска и задайте вопрос нашему менеджеру.
+            +e.search  
+              // Search
+              +b.search
+                +e.FORM.form
+                  +e.INPUT.input(type='text', name='Поиск', placeholder='Поиск...')
+
+          // Form call wide
+          include partials/components/_form--call.pug 
+          // Schema
+          include partials/components/_schema.pug 
+          // Certification documents
+          include partials/components/_certification-docs.pug 
+          // Questions section
+          include partials/components/_questions-section.pug 
+
+        .col-xs-12.col-lg-2
+          // Right sidebar
+          include partials/components/_right-sidebar.pug 
+
+

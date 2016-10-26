@@ -1,0 +1,47 @@
+.services-section{
+  @include mq($from:xs, $until:xl){
+    padding-bottom: 40px;
+  } 
+  &__title{
+    color: $text-color-white;
+    font-size: $font-size-title-24;
+    margin: 0 0 40px;
+    position: relative;
+    @include mq($from:xs, $until:md){
+      font-size: $font-size-subtitle
+    }    
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      background-color: $red;
+      height: 2px;
+      width: 80px;
+    }
+  }
+  &__list{
+    color: $text-color-grey3;
+    padding-left: 0;
+    padding-right: 10px;
+    margin: 0;
+    list-style-type: none;
+    columns: 2;
+    @include mq($from:xs, $until:sm){
+      columns: initial;
+    }
+  }
+  &__item{
+    margin-bottom: 5px;
+    &:before{
+      content: '- ';
+    }
+  }
+  &__link{
+    color: $text-color-white;
+    &:hover, &:focus {
+      color: $text-color-white;
+    }
+  }
+}
+

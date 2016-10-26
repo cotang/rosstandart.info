@@ -1,0 +1,14 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.certification-docs
+  +e.H3.title Виды сертификационных документов
+  +e.gallery
+    - for (var i = 0; i < 10; i++){
+      +e.A.slide(href="page.html")
+        img(src="img/cert1.jpg", alt="cert1", title="cert1")
+        +e.DIV.text
+          span Сертификат соответствия ГОСТ Р
+    - }
+
+
+
