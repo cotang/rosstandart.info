@@ -1,9 +1,0 @@
-mixin questionsSectionItem(askPerson, askText)
-  +b.ARTICLE.questions-section-item(itemscope, itemtype="http://schema.org/Question")
-    +e.ask
-      +e.text(itemprop="text") !{askText}
-      +e.person(itemprop="author") !{askPerson}
-    +e.links
-      +e.A.link(href="single-question.html") Читать ответ
-      +e.A.link(href="page-questions.html") Смотреть все вопросы
-

@@ -1,9 +1,0 @@
-mixin questionsItem(title, askPerson, askText)
-  +b.ARTICLE.question(itemscope, itemtype="http://schema.org/Question")
-    +e.H2.subtitle
-      a(href="single-question.html", itemprop="headline") #{title}   
-    +e.ask
-      +e.person(itemprop="author") !{askPerson}
-      +e.text(itemprop="text") !{askText}
-    +e.A.link(href="single-question.html") Читать далее...
-
