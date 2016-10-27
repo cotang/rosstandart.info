@@ -1,5 +1,5 @@
 .contacts-section{
-  margin-top: 50px;
+  // margin-top: 50px;
   border-top: 7px solid $dark-green;
   @include mq($from:xs, $until:lg){
     display: none;
@@ -83,7 +83,7 @@
 
 
 
-.city{
+.city-section{
   margin: 0 -15px; /* убираем paddding у .col из сетки */
   border-left: 1px solid $sidebar--border;
   text-align: center;

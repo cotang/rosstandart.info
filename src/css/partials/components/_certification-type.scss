@@ -1,0 +1,57 @@
+.certification-type{
+  margin-left: 5%;
+  margin-right: 5%;
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    margin-bottom: 20px;
+    @include mq($from:xs, $until:xl){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    @include mq($from:xs, $until:sm){
+      flex-wrap: wrap;
+    }
+  }
+  &__img{
+    flex: 0 0 250px;
+    width: 250px;
+    height: 175px;
+    @include mq($from:xs, $until:sm){
+      margin: 0 auto;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__text{
+    padding: 0 10px;
+    @include mq($from:xs, $until:sm){
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  &__name{
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+  }
+  &__sublist{
+    display: none;
+    margin: 10px 0;
+    padding-left: 10px;
+    list-style-type: none;
+  }
+
+}

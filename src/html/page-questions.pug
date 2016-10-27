@@ -4,7 +4,7 @@ block content
   +b.SECTION.page--questions
     .container-fluid
       .row
-        .col-xs-12.col-lg-2    
+        .hidden-xs.visible-lg.col-lg-2     
           // Left sidebar
           include partials/components/_left-sidebar.pug 
 
@@ -16,12 +16,12 @@ block content
               p Здравствуйте!
               p Возникшие у вас вопросы, вы можете задать, воспользовавшись формой на этой странице. Обратите внимание, что все поля в форме обязательны для заполнения.
               p Наши специалисты с радостью помогут вам разобраться в тонкостях сертификации! Ждем ваших вопросов!
-          // Form question
-          include partials/components/_form--question.pug 
-          // Questions
-          include partials/components/_questions.pug 
+            // Form question
+            include partials/components/_form--question.pug 
+            // Questions
+            include partials/components/_questions.pug 
 
-        .col-xs-12.col-lg-2
+        .hidden-xs.visible-lg.col-lg-2 
           // Right sidebar
           include partials/components/_right-sidebar.pug 
 

@@ -2,18 +2,25 @@
   &__inner{
     background-color: $darkest-green;
   }
-
+  .form{
+    margin: 20px 0;
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+  }
   .form__title{
     font-size: $font-size-small;
     color: $light-green;
     font-weight: bold;
   }
   .form__input{
+    font-weight: normal;
     font-size: $font-size-small;
     background-color: $form--bg;
     padding: 5px 10px;
   }
   .form__textarea{
+    font-weight: normal;
     font-size: $font-size-small;
     background-color: $form--bg;
     padding: 5px 10px;

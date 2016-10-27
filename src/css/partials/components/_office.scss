@@ -1,13 +1,21 @@
+.city{
+  text-align: center;
+}
+
 .office{
+  text-align: left;
+  margin-bottom: 40px;
   &__flags{
     img{
       margin-right: 10px;
     }
   }
   &__map{
-    padding: 20px 0;
+    margin: 20px 0;
+    height: 400px;
     @include mq($from:xs, $until:sm){
       padding: 0;
+      height: 300px;
     } 
 
     iframe{

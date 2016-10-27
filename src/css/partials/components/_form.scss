@@ -4,25 +4,24 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: $text-green;
-
+  margin: 20px 25%;
+  @include mq($from:sm, $until:xl){
+    margin: 20px 5%;
+  }
+  @include mq($from:xs, $until:sm){
+    margin: 20px 0;
+  }
+  
   form{
     display: flex;
     flex-wrap: wrap;
   }
-  // &__close{
-  //   position: absolute;
-  //   top: 10px;
-  //   right: 10px;
-  //   display: inline-block;
-  //   opacity: 0.1;
-  //   @include sprite($s-close);
-  // }
   &__title{
     flex: 0 0 100%;
     max-width: 100%;
     margin: 0;
     padding: 0 15px 15px;
-    font-weight: normal;
+    font-weight: bold;
     font-size: $font-size-supertitle;
     text-transform: uppercase;
   }
@@ -35,9 +34,10 @@
   }
   &__input{
     background-color: $white;
-    padding: 15px 20px;    
+    padding: 10px 15px;    
     width: 100%;
     border: 1px solid $form--bg;
+    font-weight: bold;
     &::-webkit-input-placeholder{
       color: $text-green;
     }       
@@ -54,10 +54,12 @@
   &__textarea{
     color: $text-green;
     background-color: $white;
-    padding: 15px 20px;    
+    padding: 10px 15px;     
     width: 100%;
     border: 1px solid $form--bg;
     height: 150px;
+    vertical-align: top;
+    font-weight: bold;
     &::-webkit-input-placeholder{
       color: $text-green;
     }       
@@ -70,13 +72,9 @@
     &:focus::placeholder{
       color: transparent;         
     } 
-  }  
-
-
+  }
 
   &--call{
-    margin-left: 25%;
-    margin-right: 25%;
     background-image: url(../img/formback.png);
     background-repeat: repeat;
     border: 1px solid $form--bg;
@@ -91,11 +89,40 @@
         margin-bottom: 15px;
       } 
     }
+    .form__title{
+      font-weight: normal;
+    }
+    .form__input{
+      font-weight: normal;
+      padding: 15px 20px; 
+    }
+    .form__textarea{
+      font-weight: normal;
+      padding: 15px 20px; 
+    }
+ 
   }
-  @include mq($from:xs, $until:xl){
-    margin-left: 0;
-    margin-right: 0;
-  } 
+
+  &--question, &--application{
+    background-color: $light-green;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    // .form-group:nth-of-type(1), 
+    // .form-group:nth-of-type(2) {
+    //   flex: 0 0 50%;
+    //   max-width: 50%;
+    //   margin-bottom: 30px; 
+    //   @include mq($from:xs, $until:sm){
+    //     flex: 0 0 100%;
+    //     max-width: 100%;
+    //     margin-bottom: 15px;
+    //   } 
+    // }
+    // @include mq($from:xs, $until:xl){
+    //   margin-left: 0;
+    //   margin-right: 0;
+    // } 
+  }
 
 }
 
