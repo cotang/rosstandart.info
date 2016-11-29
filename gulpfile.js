@@ -137,12 +137,7 @@ gulp.task('js', function() {
 gulp.task('img', function () {
   return gulp.src(path.src.img)
     .pipe(gulpif(devBuild, changed(path.build.img)))
-    .pipe(gulpif(!devBuild, imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant(),jpegoptim({max: 95})],
-      interlaced: true
-    })))
+    .pipe(gulpif(!devBuild, imagemin()))
     .pipe(gulp.dest(path.build.img))
     .pipe(reload({stream: true}));
 });
