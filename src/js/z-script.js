@@ -4,8 +4,6 @@
 
 jQuery(document).ready(function($){  
 
-
-
   /* галерея header banner */
   $('.promo__gallery').slick({
     infinite: true,
@@ -85,7 +83,6 @@ jQuery(document).ready(function($){
     ]
   });
 
-
   /* галерея contacts-section по городу */
   $('.contacts-section__city-wrapper').slick({
     slidesToShow: 1,
@@ -105,7 +102,6 @@ jQuery(document).ready(function($){
     centerMode: true,
     focusOnSelect: true
   });
-
 
   /* галерея contacts-section по офису */
   $('.contacts-section__office-gallery').slick({
@@ -152,20 +148,44 @@ jQuery(document).ready(function($){
       $(this).closest('.certification-type__text').find('.certification-type__sublist').slideToggle();
   });
 
+  /* Map */
+  $('.office__map').each(function (index, Element) {
+      var map =new GMaps({
+          el: Element,
+          lat: 56.8378081,
+          lng: 60.5950772,
+          scrollwheel: false
+      });
+      map.addMarker({
+          lat: 56.8378081,
+          lng: 60.5950772,
+      });
 
+      // $(Element).append("<div class='test'>Тест</div>");
+      // var coords = $(Element).text().split(",");
+      // if (coords.length != 3) {
+      //     $(this).display = "none";
+      //     return;
+      // }
+      // var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+      // var myOptions = {
+      //     zoom: parseFloat(coords[2]),
+      //     center: latlng,
+      //     mapTypeId: google.maps.MapTypeId.ROADMAP,
+      //     disableDefaultUI: false,
+      //     mapTypeControl: true,
+      //     zoomControl: true,
+      //     zoomControlOptions: {
+      //         style: google.maps.ZoomControlStyle.SMALL
+      //     }
+      // };
+      // var map = new google.maps.Map(Element, myOptions);
+      // var marker = new google.maps.Marker({
+      //     position: latlng,
+      //     map: map
+      // });
+  });
 
-
-    /* Map */
-    var map = new GMaps({
-        el: '.office__map',
-        lat: 56.8378081,
-        lng: 60.5950772,
-        scrollwheel: false
-    });
-    map.addMarker({
-        lat: 56.8378081,
-        lng: 60.5950772,
-    });
 
 });
 

@@ -1,8 +1,8 @@
 'use strict';
 
 // Set Env
-process.env.NODE_ENV = 'development';
-// process.env.NODE_ENV = 'production';
+// process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'production';
 
 // Check ENV
 global.devBuild = process.env.NODE_ENV !== 'production';
@@ -24,6 +24,7 @@ const changed = require('gulp-changed');
 // pug
 const pug = require('gulp-pug');
 const cached = require('gulp-cached');
+const filter = require('gulp-filter');
 const pugInheritance = require('gulp-pug-inheritance');
 const prettify = require('gulp-prettify');
 // sass
@@ -85,16 +86,16 @@ gulp.task('pug', function() {
       gutil.log(gutil.colors.red(error.message));
       this.emit('end');
     }))
-    // .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
-    // .pipe(gulpif(global.isWatching, cached('pug')))
-    // .pipe(pugInheritance({basedir: path.src.htmlDir}))
-    // .pipe(filter(function (file) {
-    //   return !/\/_/.test(file.path) && !/^_/.test(file.relative);
-    // }))
+    .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
+    .pipe(gulpif(global.isWatching, cached('pug')))
+    .pipe(pugInheritance({basedir: path.src.htmlDir, extension: '.pug', skip:'node_modules'}))
+    .pipe(filter(function (file) {
+      return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+    }))
     .pipe(pug())
     .pipe(prettify({
       indent_size: 2
-    }))    
+    }))
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
 })
@@ -125,7 +126,7 @@ gulp.task('js', function() {
   return gulp.src(path.src.js)
 //    .pipe(gulpif(devBuild, sourcemaps.init()))
     .pipe(concat('script.min.js'))
-    .pipe(uglify())
+    .pipe(gulpif(!devBuild, uglify()))
 //    .pipe(gulpif(devBuild, sourcemaps.write()))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
@@ -205,7 +206,7 @@ gulp.task('setWatch', function() {
 gulp.task('watch', ['setWatch', 'browserSync'], function(){
   gulp.watch([path.watch.html], function(event, cb) {
     gulp.start('pug');
-  });
+  }, [reload]);
   gulp.watch([path.watch.css], function(event, cb) {
     gulp.start('sass');
   });
